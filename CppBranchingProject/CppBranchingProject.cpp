@@ -172,6 +172,7 @@ int main()
     }
     */
 
+    /*
     int a;
     int b;
     char sign;
@@ -183,5 +184,57 @@ int main()
     std::cout << "input sign of operation: ";
     std::cin >> sign;
 
+    double result{};
+    bool isOk{ true };
 
+    if (sign == '+')
+        result = a + b;
+    else if (sign == '-')
+        result = a - b;
+    else if (sign == '*')
+        result = a * b;
+    else if (sign == '/')
+        result = (double)a / b;
+    else
+        isOk = false;
+
+    if(isOk)
+        std::cout << "result = " << result << "\n";
+    else
+        std::cout << "incorrect sign of operation\n";
+
+
+    isOk = true;
+    switch (sign)
+    {
+    case '+':
+        result = a + b; break;
+    case '-':
+        result = a - b; break;
+    case '*':
+        result = a * b; break;
+    case '/':
+        result = (double)a / b; break;
+    default:
+        isOk = false;
+    }
+
+    if (isOk)
+        std::cout << "result = " << result << "\n";
+    else
+        std::cout << "incorrect sign of operation\n";
+    */
+    
+    int number;
+    std::cout << "Input number: ";
+    std::cin >> number;
+
+    if (number % 2)
+        std::cout << "Odd\n";
+    else
+        std::cout << "Even\n";
+
+    (number % 2) ? std::cout << "Odd\n" : std::cout << "Even\n";
+
+    std::cout << ((number % 2) ? "Odd\n" : "Even\n");
 }
